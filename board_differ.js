@@ -23,9 +23,11 @@ module.exports = function (rawBoardBuffer, rawTargetBuffer) {
         let x = n % 1000;
         let y = Math.floor(n / 1000);
         let color = colors.byInt.indexOf(val);
-        diffs.push({ x: x, y: y, color: color });
+        //diffs.push({ x: x, y: y, color: color });
+		return { x: x, y: y, color: color };
       }
     }
   }
-  return diffs[Math.floor(Math.random()*diffs.length)]
+  //return diffs[Math.floor(Math.random()*diffs.length)]
+  return null;
 };
